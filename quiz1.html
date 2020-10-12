@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Dev Quiz!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<style>
+  body {
+    background-image: url("./assets/neon-spinning.gif");
+    background-size:cover;
+    /*
+    background-repeat: no-repeat;
+    .hero::after { background-color: #563d7c; content: ""; display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: -1; opacity: 0.4; }
+    */
+  }
+
+  .banner::after {
+    content: ""; /* ::before and ::after both require content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #920cff, #33c9ff);
+    opacity: .7;
+    z-index: 1;
+  }
+  .banner > * {
+    z-index: 100;
+  }
+  .container > * {
+    z-index: 100;
+  }
+  .container-fluid > * {
+    z-index: 100;
+  }
+  .mycontainer > * {
+    z-index: 100;
+  }
+  .row > * {
+    z-index: 100;
+  }
+  .myrows > * {
+    z-index: 100;
+  }
+  .card > * {
+    z-index: 100;
+  }
+  #score > * {
+    z-index: 100;
+  }
+  #timer > * {
+    z-index: 100;
+  }
+
+</style>
+<section class="banner">
+
+<!--NavBar-->
+<nav class="navbar navbar-dark bg-info">
+  <a class="navbar-brand" href="#">
+    <img src="./assets/icon.png" width="30" height="30" alt="" loading="lazy">
+  </a>
+</nav>
+
+<!--Button Selection Questions Group-->
+<div class="container-fluid mycontainer">
+  <div class="row myrows">
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 mycols bootstrap-tiles">
+        <div class="card text-white bg-secondary mb-3" style="min-height: 100px; min-width: 500px;">
+          <div class="card-header"><h4>Question 1</h4></div>
+          <div class="card-body">
+            <h5 class="card-title">What is HTML?</h5>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button onclick="q1b1()" id="q1b1" type="button" class="btn btn-primary">A programming Language.</button>
+              <button onclick="q1b2()" id="q2b1" type="button" class="btn btn-primary">A name of a computer.</button>
+              <button onclick="q1b3()" id="q3b1" type="button" class="btn btn-primary">A virus.</button>
+              <button onclick="q1b4()" id="q4b1" type="button" class="btn btn-primary">A fancy stylesheet.</button>
+            </div>
+          <button type="button" class="btn btn-info">
+            <a href="./index-old.html">Next!</a>
+          </button>
+          </div>
+        </div>
+
+      </div>
+
+
+      </div>
+      <!--Column 1 Div-->
+  
+  </div>
+  <!--Row 1 Div-->
+
+</div>
+<!--Container 1 Div-->
+
+<!--Timer/Score-->
+<!--SCORE-->
+<h1 id="score"></h1>
+
+<h1 id="timer">10</h1>
+<!--Timer/Score-END-->
+
+</section><!--<section class="banner">-->
+<script>
+  $(".hide").hide();
+</script>
+<!--Local-JS-->
+<script src="logic.js"></script>
+<!--Bootstrap-JS-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
