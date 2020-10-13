@@ -1,0 +1,60 @@
+.btn-group{
+  height:100px;
+  position: bottom;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 3em;
+  cursor: pointer;
+  padding-top: 1px;
+  margin-bottom: 0px;
+  color: black;
+  background-color: black;
+}
+header {
+  font-size: 100px;
+  text-align: center;
+  font-style: oblique;
+  color: blue;
+  background-color: black;
+  border: black;
+  background-image: url("https://media.giphy.com/media/1vZaAcldbX8Xh6lMlV/giphy.gif");
+  background-size:cover;
+  
+}
+/* body {
+  background-color: black;
+  color: black;
+} */
+button {
+  background-color: blue;
+}
+.card-body {
+  background-color: black;
+  
+  
+}
+.card-text {
+  font-size: 20px;
+  color: blue;
+}
+.card-title {
+  font-size: 20px;
+  color: blue;
+}
+button.btn {
+  color: red;
+}
+div.giveup {
+  color: black;
+  background-color: black;
+}
+div.card-group {
+  background-color: black;
+}
+body {
+  background-image: url("https://media.giphy.com/media/1vZaAcldbX8Xh6lMlV/giphy.gif");
+  background-size:cover;
+}
+
+
+  
