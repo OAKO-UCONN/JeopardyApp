@@ -1,13 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 
-function Game() {
-  return (
-    <div>
-      <div className="container">
-        <p>game page</p>
+class Game extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Game page</h1>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Game;

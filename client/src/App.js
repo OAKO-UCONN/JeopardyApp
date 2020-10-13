@@ -1,25 +1,24 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Scores from "./pages/Scores";
 import Game from "./pages/Game";
-import "./components/stylesheets/content.css";
-import Footer from "./components/Footer";
+import Highscores from "./pages/Highscores";
+import About from "./pages/About";
+import Buttons from "./components/Buttons";
+import "./style.css";
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/game" component={Game} />
-          <Route exact path="/scores" component={Scores} />
-        </Switch>
-      </Router>
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Buttons />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/game" component={Game} />
+        <Route exact path="/highscores" component={Highscores} />
+      </div>
+    </Router>
   );
 }
-//switch seperates the routes
 
 export default App;
