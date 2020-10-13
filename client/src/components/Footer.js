@@ -1,10 +1,12 @@
 import React from "react";
-import "./footer.css";
+import "./stylesheets/footer.css";
 function Footer() {
   return (
     <footer>
       <div className="container">
-        <span className="text-muted">&copy; Copyright</span>
+        <span className="text-muted">
+          &copy; Copyright Jeopardy 2020 BootCamp Game
+        </span>
       </div>
     </footer>
   );
