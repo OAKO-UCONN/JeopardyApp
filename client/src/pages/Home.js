@@ -1,18 +1,13 @@
-import React from "react";
-import Button from "../components/Button";
-import { BrowserRouter } from "react-router-dom";
+import React, { Component } from "react";
 
-function Home() {
-  return (
-    <div>
-      <div className="container">
-        <h1 className="text-uppercase">Are you ready to play Jeopardy?</h1>
-        <BrowserRouter>
-          <Button />
-        </BrowserRouter>
+class Home extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Are you Ready to Play Jeopardy?</h1>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Home;
