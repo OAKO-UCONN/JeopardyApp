@@ -1,14 +1,22 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 
-class Highscore extends Component {
-
-  render() {
-    return (
-      <div>
-          <h1>Highscore</h1>
-       </div>
-    );
+function ShowHighscores() {
+  const [scores, setHighscores] = useState([]);
+  useEffect(() => {
+    loadHighscores();
+  }, []);
+  function loadHighscores() {
+    API.getHighScores().then((res) => setHighscores(res.data));
   }
+
+  return (
+    <div>
+      <h1>
+        {" "}
+        Here's a list of all the highscores and the players who earned them!{" "}
+      </h1>
+    </div>
+  );
 }
 
-export default Highscore;
+export default ShowHighscores;
