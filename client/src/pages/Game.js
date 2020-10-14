@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
+// import Timer from "../components/Timer";
 
-class Game extends Component {
+function Game() {
+  return (
+    <div>
+      <h1>Game</h1>
 
-  render() {
-    return (
-      <div>
-          <h1>Game</h1>
-       </div>
-    );
-  }
+      <div className="timer">{/* <Timer /> */}</div>
+    </div>
+  );
 }
 
 export default Game;
