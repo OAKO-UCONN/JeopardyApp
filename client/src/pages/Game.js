@@ -1,14 +1,13 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-class Game extends Component {
+function Game() {
+  const [timer, setTimer] = useState();
 
-  render() {
-    return (
-      <div>
-          <h1>Game</h1>
-       </div>
-    );
-  }
+  return (
+    <div>
+      <h1>Game</h1>
+    </div>
+  );
 }
 
 export default Game;
