@@ -1,10 +1,6 @@
 // import React, { useEffect, useState } from "react";
 
 // function ShowHighscores() {
-//   const [scores, setHighscores] = useState([]);
-//   useEffect(() => {
-//     loadHighscores();
-//   }, []);
 //   function loadHighscores() {
 //     API.getHighScores().then((res) => setHighscores(res.data));
 //   }
