@@ -1,15 +1,32 @@
-// import React, { useState, useEffect } from "react";
+// import React, { useState } from "react";
+
+// function
 
 // export const Timer = () => {
-//   /*pass in the initial state into useState, so if we have a timer that counts down
-//   timeLeft is value of the state
-//   figure out how much time we want to give the player,
-//   setTimer function will be used to update timer, when time is up, then timer is reset? and player can enter initials and score?
-//   */
+//   const [minutes, setMinutes] = useState(5);
+//   const [seconds, setSeconds] = useState(0);
+//   function updateTimer() {
+//     if (minutes === 0 && seconds === 0) {
+//       //render input for username and scores?
+//     } else {
+//       if (seconds === 0) {
+//         setMinutes((minutes) => minutes - 1);
+//         setSeconds(59);
+//       } else {
+//         setSeconds((seconds) => seconds - 1);
+//       }
+//     }
+//   }
+
+//   useEffect(() => {
+
+//   });
 
 //   return (
 //     <div>
-//       <h2>time left: {timeLeft}</h2>
+//       <h2>
+//         {minutes} : {seconds}
+//       </h2>
 //     </div>
 //   );
 // };

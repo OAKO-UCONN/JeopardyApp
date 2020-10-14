@@ -1,5 +1,5 @@
-.btn-group{
-  height:100px;
+.btn-group {
+  height: 100px;
   position: bottom;
   vertical-align: middle;
   text-align: center;
@@ -18,8 +18,7 @@ header {
   background-color: black;
   border: black;
   background-image: url("https://media.giphy.com/media/1vZaAcldbX8Xh6lMlV/giphy.gif");
-  background-size:cover;
-  
+  background-size: cover;
 }
 /* body {
   background-color: black;
@@ -30,8 +29,6 @@ button {
 }
 .card-body {
   background-color: black;
-  
-  
 }
 .card-text {
   font-size: 20px;
@@ -53,8 +50,5 @@ div.card-group {
 }
 body {
   background-image: url("https://media.giphy.com/media/1vZaAcldbX8Xh6lMlV/giphy.gif");
-  background-size:cover;
+  background-size: cover;
 }
-
-
-  
