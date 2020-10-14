@@ -7,7 +7,7 @@ export default {
   },
   //if user wants their highscore/scores
   getScore: function (id) {
-    return axios.gey("api/highscores/" + id);
+    return axios.get("api/highscores/" + id);
   },
   //user can save their score and it will save to highscores page....?
   saveScore: function (scoreData) {
