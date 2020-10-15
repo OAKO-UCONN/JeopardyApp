@@ -1,10 +1,11 @@
 import React from "react";
+import Timer from "../components/Timer";
 
 function Game() {
   return (
     <div>
       <title>Jeopardy</title>
-
+      <Timer />
       <div class="giveup">
         <header>JEOPARDY!</header>
       </div>

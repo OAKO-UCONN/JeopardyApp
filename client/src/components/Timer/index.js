@@ -1,32 +1,45 @@
-// import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-// function
+const Timer = () => {
+  const [seconds, setSeconds] = useState(15);
+  const [isActive, setIsActive] = useState(false);
 
-// export const Timer = () => {
-//   const [minutes, setMinutes] = useState(5);
-//   const [seconds, setSeconds] = useState(0);
-//   function updateTimer() {
-//     if (minutes === 0 && seconds === 0) {
-//       //render input for username and scores?
-//     } else {
-//       if (seconds === 0) {
-//         setMinutes((minutes) => minutes - 1);
-//         setSeconds(59);
-//       } else {
-//         setSeconds((seconds) => seconds - 1);
-//       }
-//     }
-//   }
+  function toggle() {
+    setIsActive(!isActive);
+  }
+  function reset() {
+    setSeconds(15);
+    setIsActive(false);
+  }
+  useEffect(() => {
+    let interval = null;
+    if (isActive) {
+      interval = setInterval(() => {
+        setSeconds((seconds) => seconds - 1);
+      }, 1000);
+    } else if (!isActive && seconds !== 15) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, seconds]);
 
-//   useEffect(() => {
-
-//   });
-
-//   return (
-//     <div>
-//       <h2>
-//         {minutes} : {seconds}
-//       </h2>
-//     </div>
-//   );
-// };
+  return (
+    <div>
+      {seconds}
+      <div>
+        <button
+          className={`btn btn-primary button-primary-${
+            isActive ? "active" : "inactive"
+          }`}
+          onClick={toggle}
+        >
+          {isActive ? "Pause" : "Start"}
+        </button>
+        <button className="button" onClick={reset}>
+          Reset
+        </button>
+      </div>
+    </div>
+  );
+};
+export default Timer;

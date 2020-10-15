@@ -4,7 +4,7 @@ import "./style.css";
 
 function Buttons() {
   return (
-    <div>
+    <div className="linkButtons">
       <Link className="btn" to="/">
         Home
       </Link>
