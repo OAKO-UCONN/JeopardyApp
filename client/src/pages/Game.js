@@ -1,65 +1,76 @@
 import React from "react";
-import Timer from "../components/Timer";
+//add class, hide class, style it in a way that cannot be clicked anymore,
+// disabled class
 
 function Game() {
   return (
     <div>
       <title>Jeopardy</title>
-      <Timer />
-      <div class="giveup">
+
+      <div className="giveup">
         <header>JEOPARDY!</header>
       </div>
-      <div class="btn-group">
-        <button>Cat1</button>
-        <button>Cat2</button>
-        <button>Cat3</button>
-        <button>Cat4</button>
+      <div className="btn-group">
+        <div>
+          <button>Cat1</button>
+        </div>
+        <div>
+          <button>Cat2</button>
+        </div>
+        <div>
+          <button>Cat3</button>
+        </div>
+        <div>
+          <button>Cat4</button>
+        </div>
+      </div>
+      <div className="btn-group">
+        <button id="demo" onclick="myFunction()">
+          1
+        </button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+      </div>
+      <div className="btn-group">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+      </div>
+      <div className="btn-group">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+      </div>
+      <div className="btn-group">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
       </div>
 
-      <div class="btn-group">
-        <button id="demo" onclick="myFunction()"></button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-      </div>
-      <div class="btn-group">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-      </div>
-      <div class="btn-group">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-      </div>
-      <div class="btn-group">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-      </div>
-      <div class="card-group">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
-            <button class="btn">Give Up</button>
+      <div className="card-group">
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Player</h5>
+            <p className="card-text">Score:</p>
+            <button className="btn">Give Up</button>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
-            <button class="btn">Give Up</button>
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Player</h5>
+            <p className="card-text">Score:</p>
+            <button className="btn">Give Up</button>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
-            <button class="btn">Give Up</button>
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Player</h5>
+            <p className="card-text">Score:</p>
+            <button className="btn">Give Up</button>
           </div>
         </div>
       </div>

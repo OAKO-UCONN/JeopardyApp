@@ -52,8 +52,3 @@ body {
   background-image: url("https://media.giphy.com/media/1vZaAcldbX8Xh6lMlV/giphy.gif");
   background-size: cover;
 }
-.linkButtons {
-  width: 100%;
-  margin: 2rem;
-  display: inline-flex;
-}
