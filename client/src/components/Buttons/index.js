@@ -5,23 +5,41 @@ import "./style.css";
 //Buttons This are the Buttons that show up on all pages.
 function Buttons() {
   return (
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container buttons-container">
-
-        {/*Home Button*/}
-        <Link className="btn btn-outline-primary" to="/">Home</Link>
-
-        {/*Play Button*/}
-        <Link to="/game" className="btn btn-outline-info">Play!</Link>
-      
-        {/*Scores Button*/}
-        <Link to="/highscores" className="btn btn-outline-success"> Scores </Link>
-      
-        {/*About Button*/}
-        <Link to="/about"className="btn btn-outline-danger">About</Link>
-
-      </div>{/*BootStrap Container ENDS*/}
-    </div>//BootStrap jumbotron div ENDS
+    <div>
+      <Link className="btn" to="/">
+        Home
+      </Link>
+      <Link
+        to="/game"
+        className={
+          window.location.pathname === "/game"
+            ? "nav-link active btn"
+            : "nav-link btn"
+        }
+      >
+        Click here to Play!
+      </Link>
+      <Link
+        to="/highscores"
+        className={
+          window.location.pathname === "/highscores"
+            ? "nav-link active btn"
+            : "nav-link btn"
+        }
+      >
+        Check out the Highscores
+      </Link>
+      <Link
+        to="/about"
+        className={
+          window.location.pathname === "/about"
+            ? "nav-link active btn"
+            : "nav-link btn"
+        }
+      >
+        About
+      </Link>
+    </div>
   );
 }
 
