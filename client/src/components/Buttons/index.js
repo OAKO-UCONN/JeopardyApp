@@ -19,8 +19,8 @@ function Buttons() {
         {/*About Button*/}
         <Link to="/about"className="btn btn-outline-danger">About</Link>
 
-      </div>{/*BootStrap Container ENDS*/}
-    </div>//BootStrap jumbotron div ENDS
+      </div>/*BootStrap Container ENDS*/
+    /*BootStrap jumbotron div ENDS*/
   );
 }
 
