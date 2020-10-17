@@ -38,26 +38,26 @@ function Game() {
         <button className='game-button' data-toggle="modal" data-target="#exampleModal" >1000</button>
      </div>
 
-
+    {/*For the Give Up Button can put a popup that says "are you sure you want to give up?"*/}
       <div class="card-group">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
+            <p class="card-text">Total Score:</p>
             <button type="button" className="btn btn-danger" >Give Up</button>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
+            <p class="card-text">Total Score:</p>
             <button type="button" className="btn btn-danger" >Give Up</button>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
+            <p class="card-text">Total Score:</p>
             <button type="button" className="btn btn-danger" >Give Up</button>
           </div>
         </div>
@@ -91,6 +91,9 @@ function Game() {
       If its not declared it will give a failed to compile error
       so for now its commented out.*/}
 
+      <div class="scoreboard-title">
+        <h1 class="scoreboard-title">Detailed Scoreboard</h1>
+      </div>
 
       {/*--------------------PLAYER 1 Scoreboard---------------*/}
       <div class="playername">
@@ -249,7 +252,6 @@ function Game() {
 {/*======================= Score-Board END ======================*/}
 
     </div>//Do not delete this div!
-  /*Old Player Score Tracker END*/
 
   );
 }
