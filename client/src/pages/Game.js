@@ -9,34 +9,36 @@ function Game() {
   return (
     <div className="wrapper">
       <div className="game-wrapper">
-        <button className='game-title' >Category 1</button>
-        <button className='game-title' >Category 2</button>
-        <button className='game-title' >Category 3</button>
-        <button className='game-title' >Category 4</button>
+
+        <button className='button' >Category</button>
+        <button className='button' data-toggle="modal"  >Category</button>
+        <button className='button' data-toggle="modal"  >Category</button>
+        <button className='button' data-toggle="modal"  >Category</button>
 
 
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >1</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >2</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >3</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >4</button>
 
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >1</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >2</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >3</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >4</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >100</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >100</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >100</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >100</button>
 
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >1</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >2</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >3</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >4</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >300</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >300</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >300</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >300</button>
 
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >1</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >2</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >3</button>
-        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >4</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >600</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >600</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >600</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >600</button>
+
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >1000</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >1000</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >1000</button>
+        <button className='game-button' data-toggle="modal" data-target="#exampleModal" >1000</button>
      </div>
 
-     <section className='jumbotron'>
+
       <div class="card-group">
         <div class="card">
           <div class="card-body">
@@ -60,7 +62,7 @@ function Game() {
           </div>
         </div>
       </div>
-      </section>
+
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -75,7 +77,7 @@ function Game() {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+
       </div>
     </div>
   </div>
@@ -88,7 +90,7 @@ function Game() {
       {/*  {player1} Inside it needs to be declared.
       If its not declared it will give a failed to compile error
       so for now its commented out.*/}
-    
+
 
       {/*--------------------PLAYER 1 Scoreboard---------------*/}
       <div class="playername">
@@ -105,7 +107,7 @@ function Game() {
       </div>
 
       {/*Category 2*/}
-      <div class="btn-group">  
+      <div class="btn-group">
         <button class="catagory">Cat2</button>
         <button class="scoreboard-question-btn-led">1</button>
         <button class="scoreboard-question-btn-led">2</button>
@@ -156,7 +158,7 @@ function Game() {
       </div>
 
       {/*Category 2*/}
-      <div class="btn-group">  
+      <div class="btn-group">
         <button class="catagory">Cat2</button>
         <button class="scoreboard-question-btn-led">1</button>
         <button class="scoreboard-question-btn-led">2</button>
@@ -207,7 +209,7 @@ function Game() {
       </div>
 
       {/*Category 2*/}
-      <div class="btn-group">  
+      <div class="btn-group">
         <button class="catagory">Cat2</button>
         <button class="scoreboard-question-btn-led">1</button>
         <button class="scoreboard-question-btn-led">2</button>

@@ -12,6 +12,7 @@ function App() {
     <Router>
       <div>
         <Buttons />
+
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/game" component={Game} />
