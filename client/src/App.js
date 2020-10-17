@@ -5,6 +5,7 @@ import Game from "./pages/Game";
 // import Highscores from "./pages/Highscores";
 import About from "./pages/About";
 import Buttons from "./components/Buttons";
+import "./pages/style.css";
 
 function App() {
   return (
