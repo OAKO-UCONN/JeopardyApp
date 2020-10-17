@@ -10,10 +10,10 @@ function Game() {
     <div className="wrapper">
       <div className="game-wrapper">
 
-        <button className='button' >Category</button>
-        <button className='button' data-toggle="modal"  >Category</button>
-        <button className='button' data-toggle="modal"  >Category</button>
-        <button className='button' data-toggle="modal"  >Category</button>
+        <button className='title-category' data-toggle="modal"  >Category</button>
+        <button className='title-category' data-toggle="modal"  >Category</button>
+        <button className='title-category' data-toggle="modal"  >Category</button>
+        <button className='title-category' data-toggle="modal"  >Category</button>
 
 
 
