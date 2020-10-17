@@ -2,40 +2,28 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-//Buttons This are the Buttons that show up on all pages.
 function Buttons() {
   return (
-    <div>
-      <Link className="btn" to="/">
+   
+      <div class="container buttons-container">
+      <Link className="btn btn-outline-primary" to="/">
         Home
       </Link>
       <Link
         to="/game"
-        className={
-          window.location.pathname === "/game"
-            ? "nav-link active btn"
-            : "nav-link btn"
-        }
+        className="btn btn-outline-info"
       >
-        Click here to Play!
+       Play!
       </Link>
       <Link
         to="/highscores"
-        className={
-          window.location.pathname === "/highscores"
-            ? "nav-link active btn"
-            : "nav-link btn"
-        }
+        className="btn btn-outline-success"
       >
-        Check out the Highscores
+        Scores
       </Link>
       <Link
         to="/about"
-        className={
-          window.location.pathname === "/about"
-            ? "nav-link active btn"
-            : "nav-link btn"
-        }
+        className="btn btn-outline-danger"
       >
         About
       </Link>
