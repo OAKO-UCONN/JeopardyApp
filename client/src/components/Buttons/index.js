@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
+//Buttons This are the Buttons that show up on all pages.
 function Buttons() {
   return (
-    <div className="linkButtons">
+    <div>
       <Link className="btn" to="/">
         Home
       </Link>

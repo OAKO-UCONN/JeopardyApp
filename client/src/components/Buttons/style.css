@@ -1,4 +1,12 @@
 .btn {
-  color: white;
-  margin-right: 5px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.507);
+  padding: 15px;
+  margin-right: 15px;
+}
+
+.jumbotron{
+  background-image: url("https://image.freepik.com/free-vector/background-mountains-landscape_23-2148267131.jpg");
+  background-size:100%;
+  background-repeat: no-repeat;
 }
