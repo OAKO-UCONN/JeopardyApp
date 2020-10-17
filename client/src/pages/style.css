@@ -5,3 +5,40 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.game-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.wrapper{
+  width: 85%;
+  margin: 0 auto;
+}
+
+.game-title{
+  background-color: rgba(231, 49, 49, 0.829);
+  padding: 15px;
+  color: #fff;
+  border:red solid 1px;
+}
+
+.game-button{
+  background-color: dodgerblue;
+  padding: 15px;
+  color: #fff;
+  border:rgb(20, 85, 150) solid 1px;
+}
+
+.game-button:hover{
+  transform: scale(1.2);
+  background-color: rgb(30, 128, 255);
+}
+
+.card-body{
+  text-align: start;
+}
+
+.rules-wrapper{
+  text-align: center;
+}
