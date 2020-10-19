@@ -24,7 +24,7 @@ function Game() {
         <button className="button" data-toggle="modal">
           Category
         </button>
-
+)
   var player1 = undefined;
   var player2 = undefined;
   var player3 = undefined;
@@ -238,13 +238,14 @@ function Game() {
           </div>
         </div>
       </div>
-    </div>
+    </div>{/*<div className="wrapper">*/}
 
             <p class="card-text">Total Score:</p>
             <button type="button" className="btn btn-danger" >Give Up</button>
           </div>
         </div>
-      </div>
+  );//</div>////Leave this commented out in case we need it.
+
 
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -434,10 +435,10 @@ function Game() {
 {/*<button id="demo" onclick="myFunction()"></button>*/}
 {/*======================= Score-Board END ======================*/}
 
-    </div>//Do not delete this div!
+    //</div>//Leave this commented out in case we need it.
 
 
-  );
+  //);//Leave this commented out in case we need it.
 }
 
 export default Game;
