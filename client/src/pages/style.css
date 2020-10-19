@@ -53,13 +53,36 @@ body {
 .rules-wrapper{
   text-align: center;
 }
-button {
+
+.title-category {
   color: white;
   background-color: black;
   height: 100px;
-  
 }
+
+button {
+  color: white;
+  background-color: black;
+  /*height: 100px;*/
+}
+
 div.card-group {
   margin: 10px;
 }
 
+.playername {
+  color: rgba(243, 181, 255, 0.829);
+  background-color: rgba(51, 255, 0, 0.349);
+  font-weight: 900;
+}
+
+.scoreboard-question-btn-led {
+  color: white;
+  background-color: rgb(138, 133, 65, 0.75);
+  min-width: 3rem;
+  min-height: 1rem;
+};
+
+.scoreboard-title {
+  color: rgb(90,89,89);
+};
