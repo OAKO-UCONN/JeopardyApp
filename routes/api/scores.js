@@ -1,4 +1,4 @@
-const router = require("expres").Router();
+const router = require("express").Router();
 const playersScores = require("../../controllers/playersScores");
 
 router.route("/").get(playersScores.findAll).post(playersScores.create);
