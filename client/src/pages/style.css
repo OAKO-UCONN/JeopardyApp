@@ -8,49 +8,46 @@ body {
   background-size: cover;
 }
 
-.game-wrapper{
+.game-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   border: solid 2px;
   border-color: black;
 }
 
-.wrapper{
+.wrapper {
   width: 80%;
   margin: 0 auto;
   padding-top: 80px;
 }
 
-.game-title{
+.game-title {
   background-color: rgba(231, 49, 49, 0.829);
   padding: 0px;
   color: #fff;
-  border:red solid 1px;
-  
-  
+  border: red solid 1px;
 }
 
-.game-button{
+.game-button {
   background-color: darkblue;
   padding: 15px;
   color: #fff;
-  border:black solid 2px;
+  border: black solid 2px;
   height: 125px;
-  
 }
 
-.game-button:hover{
+.game-button:hover {
   transform: scale(1.2);
-  background-color: darkblue
+  background-color: darkblue;
 }
 
-.card-body{
+.card-body {
   text-align: left;
   border: solid 2px;
   border-color: black;
 }
 
-.rules-wrapper{
+.rules-wrapper {
   text-align: center;
 }
 
@@ -75,14 +72,3 @@ div.card-group {
   background-color: rgba(51, 255, 0, 0.349);
   font-weight: 900;
 }
-
-.scoreboard-question-btn-led {
-  color: white;
-  background-color: rgb(138, 133, 65, 0.75);
-  min-width: 3rem;
-  min-height: 1rem;
-};
-
-.scoreboard-title {
-  color: rgb(90,89,89);
-};
