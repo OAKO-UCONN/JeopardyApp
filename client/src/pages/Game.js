@@ -1,26 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import questions from "./questions.json";
 
 function Game() {
-  const [showModal, setShowModal] = React.useState(true);
-  const [questiondata, setQuestion] = React.useState("");
-  const [timer, setTimer] = React.useState(15);
+  const [showModal, setShowModal] = useState(true);
+  const [questiondata, setQuestion] = useState("");
+  const [questiontitle, setTitle] = useState("");
+  const [timeLeft, setTimeLeft] = useState(null);
+  useEffect(() => {
+    if (timeLeft === 0) {
+      console.log("TIME LEFT IS 0");
+      setTimeLeft(null);
+      setShowModal(false);
+    }
 
-  //a hook to show or hide the modal when it has been clicked by a player or is still available
-  let time = 15;
-  const Timer = () => {
-    setInterval(function countdown() {
-      time -= 1;
-      setTimer(time);
-      if (time === 0) {
-        //close out question
-        setShowModal(false);
-      }
+    // exit early when we reach 0
+    if (!timeLeft) return;
+
+    // save intervalId to clear the interval when the
+    // component re-renders
+    const intervalId = setInterval(() => {
+      setTimeLeft(timeLeft - 1);
     }, 1000);
-  };
 
-  //questions array of objs...attributes wasclicked boolean,false by default, if true disable
-  //set diasble t
+    // clear interval on re-render to avoid memory leaks
+    return () => clearInterval(intervalId);
+    // add timeLeft as a dependency to re-rerun the effect
+    // when we update it
+  }, [timeLeft]);
+
   return (
     <div className="wrapper">
       <div className="game-wrapper">
@@ -35,15 +42,16 @@ function Game() {
           Category
         </button>
 
-        {questions.map(({ id, question, score, wasClicked }, index) => (
+        {questions.map(({ id, question, score, title }, index) => (
           <button
             key={id}
             className="game-button"
             data-toggle="modal"
             data-target="#exampleModal"
-            disabled={wasClicked}
+            // disabled={wasClicked}
             onClick={() => {
-              Timer();
+              setTimeLeft(15);
+              setTitle(title);
               setQuestion(question);
             }}
           >
@@ -52,29 +60,29 @@ function Game() {
         ))}
       </div>
 
-      <div class="card-group">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
+      <div className="card-group">
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Player</h5>
+            <p className="card-text">score</p>
             <button type="button" className="btn btn-danger">
               Give Up
             </button>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Player</h5>
+            <p className="card-text">score</p>
             <button type="button" className="btn btn-danger">
               Give Up
             </button>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Player</h5>
+            <p className="card-text">score</p>
             <button type="button" className="btn btn-danger">
               Give Up
             </button>
@@ -90,26 +98,26 @@ function Game() {
           role="dialog"
           aria-labelledby="exampleModalLabel"
         >
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                  {timer} Question Title
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  {timeLeft} {questiontitle}
                 </h5>
                 <button
                   type="button"
-                  class="close"
+                  className="close"
                   data-dismiss="modal"
                   aria-label="Close"
                 >
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">{questiondata}</div>
-              <div class="modal-footer">
+              <div className="modal-body">{questiondata}</div>
+              <div className="modal-footer">
                 <button
                   type="button"
-                  class="btn btn-secondary"
+                  className="btn btn-secondary"
                   data-dismiss="modal"
                 >
                   Close
@@ -124,4 +132,3 @@ function Game() {
 }
 
 export default Game;
-
