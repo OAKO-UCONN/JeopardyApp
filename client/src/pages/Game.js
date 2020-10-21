@@ -1,31 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import questions from "./questions.json";
 
 function Game() {
-  const [player, setPlayer] = useState();
+  const [showModal, setShowModal] = useState(true);
   const [questiondata, setQuestion] = useState("");
-  const [questiontitle, setQuestionTitle] = useState("");
-  // const [showModal, setShowModal] = useState(false);
-  // const [timer, setTimer] = useState(5);
-  // let time = 5;
-  // const Timer = () => {
-  //   setInterval(function countdown() {
-  //     time -= 1;
-  //     setTimer(time);
-  //     if (time === 0) {
-  //       //close out question
-  //       clearInterval(Timer);
-  //       setShowModal(!showModal);
-  //     }
-  //   }, 1000);
-  //   return clearInterval(Timer);
-  // };
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setSeconds((seconds) => seconds - 1);
-  //   }, 1000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  const [questiontitle, setTitle] = useState("");
+  const [timeLeft, setTimeLeft] = useState(null);
+  useEffect(() => {
+    if (timeLeft === 0) {
+      console.log("TIME LEFT IS 0");
+      setTimeLeft(null);
+      setShowModal(false);
+    }
+
+    // exit early when we reach 0
+    if (!timeLeft) return;
+
+    // save intervalId to clear the interval when the
+    // component re-renders
+    const intervalId = setInterval(() => {
+      setTimeLeft(timeLeft - 1);
+    }, 1000);
+
+    // clear interval on re-render to avoid memory leaks
+    return () => clearInterval(intervalId);
+    // add timeLeft as a dependency to re-rerun the effect
+    // when we update it
+  }, [timeLeft]);
 
   return (
     <div className="wrapper">
@@ -47,9 +48,10 @@ function Game() {
             className="game-button"
             data-toggle="modal"
             data-target="#exampleModal"
+            // disabled={wasClicked}
             onClick={() => {
-              // Timer();
-              setQuestionTitle(title);
+              setTimeLeft(15);
+              setTitle(title);
               setQuestion(question);
             }}
           >
@@ -57,29 +59,30 @@ function Game() {
           </button>
         ))}
       </div>
-      <div class="card-group">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
+
+      <div className="card-group">
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Player</h5>
+            <p className="card-text">score</p>
             <button type="button" className="btn btn-danger">
               Give Up
             </button>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Player</h5>
+            <p className="card-text">score</p>
             <button type="button" className="btn btn-danger">
               Give Up
             </button>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Player</h5>
-            <p class="card-text">Score:</p>
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Player</h5>
+            <p className="card-text">score</p>
             <button type="button" className="btn btn-danger">
               Give Up
             </button>
@@ -87,42 +90,43 @@ function Game() {
         </div>
       </div>
 
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                {/* {timer}  */}
-                {questiontitle}
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">{questiondata}</div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
+      {showModal ? (
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+        >
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  {timeLeft} {questiontitle}
+                </h5>
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">{questiondata}</div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      ) : null}
     </div>
   );
 }
