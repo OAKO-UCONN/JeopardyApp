@@ -1,18 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import questions from "./questions.json";
 
 function Game() {
-  const [disabled, setDisabled] = useState([]);
+  const [player, setPlayer] = useState();
   const [questiondata, setQuestion] = useState("");
   const [questiontitle, setQuestionTitle] = useState("");
-  const [seconds, setSeconds] = useState();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSeconds((seconds) => seconds - 1);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+  // const [showModal, setShowModal] = useState(false);
+  // const [timer, setTimer] = useState(5);
+  // let time = 5;
+  // const Timer = () => {
+  //   setInterval(function countdown() {
+  //     time -= 1;
+  //     setTimer(time);
+  //     if (time === 0) {
+  //       //close out question
+  //       clearInterval(Timer);
+  //       setShowModal(!showModal);
+  //     }
+  //   }, 1000);
+  //   return clearInterval(Timer);
+  // };
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setSeconds((seconds) => seconds - 1);
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <div className="wrapper">
@@ -35,7 +48,7 @@ function Game() {
             data-toggle="modal"
             data-target="#exampleModal"
             onClick={() => {
-              setSeconds(15);
+              // Timer();
               setQuestionTitle(title);
               setQuestion(question);
             }}
@@ -85,7 +98,8 @@ function Game() {
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                {seconds} {questiontitle}
+                {/* {timer}  */}
+                {questiontitle}
               </h5>
               <button
                 type="button"
@@ -114,4 +128,3 @@ function Game() {
 }
 
 export default Game;
-
